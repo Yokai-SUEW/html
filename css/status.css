@@ -1,0 +1,32 @@
+.iconServer {
+    text-align: left;
+    position: fixed;
+    height: 3cm;
+    z-index: 100;
+    padding-top: 0.5%;
+}
+
+.iconServer h3 {
+    padding-left: 2cm;
+    margin-top: -1.45cm;
+}
+
+.statusTable table {
+    text-align: center;
+    width: 100%;
+}
+
+.statusTable {
+    overflow: auto;
+    max-height: 400px;
+}
+
+.statusTable table tbody tr:hover {
+    background-color: rgb(65, 65, 65);
+    border-style: none !important;
+    border-radius: 2mm !important;
+}
+
+.iconMenu {
+    text-align: right !important;
+}

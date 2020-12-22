@@ -1,0 +1,41 @@
+.dropbtn{
+    z-index: 99;
+    padding-bottom: 0.3cm;
+    float: right !important;
+}
+
+.iconCCTV {
+    text-align: left;
+    position: fixed;
+    height: 2.5cm;
+    z-index: 100;
+}
+
+.iconCCTV h3 {
+    padding-left: 2.8cm !important;
+    margin-top: 0.8cm;
+}
+
+.iconCCTV img {
+    float: left !important;
+    margin-bottom: 0.5%;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+h2:hover {
+    letter-spacing: 2mm;
+    text-shadow: 4px 4px 4px black;
+}
+
+.imageContainer{
+    height: 600px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.iconMenu button {
+    text-align: right !important;
+}

@@ -1,0 +1,52 @@
+.dropbtn{
+    z-index: 99;
+    padding-bottom: 0.3cm;
+    float: right !important;
+}
+
+.iconProfile {
+    text-align: left;
+    position: fixed;
+    height: 2.5cm;
+    z-index: 100;
+}
+
+.iconProfile h3 {
+    padding-left: 2.8cm !important;
+    margin-top: 0.8cm;
+}
+
+.iconProfile img {
+    float: left !important;
+    margin-bottom: 0.5%;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+h2:hover {
+    letter-spacing: 2mm;
+    text-shadow: 4px 4px 4px black;
+}
+
+.imageContainer{
+    height: 600px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.iconMenu button {
+    text-align: right !important;
+}
+
+.profilTable table {
+    text-align: center;
+    width: 100%;
+}
+
+.profilTable table tbody tr:hover {
+    background-color: rgb(65, 65, 65);
+    border-style: none !important;
+    border-radius: 2mm !important;
+}
