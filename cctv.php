@@ -23,7 +23,9 @@ if (!isset($_SESSION['loggedin'])) {
         <div id="stars2"></div>
         <div id="stars3"></div>
 </section>
-
+<div onclick="location.href='profil.php'" id="userlogged">
+    Logged in as: <?=$_SESSION['name']?>
+    </div>
 <div class="col-8 header-content">
         <div class="row">
             <div class="col-7 iconCCTV">

@@ -33,7 +33,6 @@ $stmt->close();
         <div id="stars2"></div>
         <div id="stars3"></div>
 </section>
-
 <div class="col-8 header-content">
         <div class="row">
             <div class="col-7 iconProfile">

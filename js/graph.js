@@ -12,9 +12,9 @@ $.ajax({
   
         for(var i in data) {
           id.push("ID " + data[i].id);
-          Temperatur.push(data[i].temperatur);
-          Luftfeuchtigkeit.push(data[i].luftfeuchtigkeit);
-          Datum.push(data[i].datum);
+          Temperatur.push(parseFloat(data[i].Temperatur));
+          Luftfeuchtigkeit.push(data[i].Luftfeuchtigkeit);
+          Datum.push(data[i].Datum.substring(0, 19));
         }
 
         var ctx = $("#line-chartcanvas");
@@ -25,7 +25,7 @@ $.ajax({
             datasets:
             [
                 {
-                    label: "Temperatur",
+                    label: "Temperatur in °C",
                     fill: false,
                     lineTension: 0.1,
                     backgroundColor: "rgba(230, 0, 0, 0.75)",
@@ -35,7 +35,7 @@ $.ajax({
                     data: Temperatur
                 },
                 {
-                    label: "Luftfeuchtigkeit",
+                    label: "Luftfeuchtigkeit in %",
                     fill: false,
                     lineTension: 0.1,
                     backgroundColor: "rgba(59, 89, 152, 0.75)",
@@ -63,15 +63,25 @@ $.ajax({
             fontColor : "white"
           }
         };
-  
 
         var ctx = document.getElementById('line-chartcanvas').getContext('2d');
-        var myLineChart = new Chart(ctx,
-        {
-            type: 'line',
-            data: chartdata,
-            options: options
-        });
+        var myChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+              labels: chartdata.labels,
+              datasets: chartdata.datasets,  
+              data: Temperatur,
+          },
+          options: {
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero: true
+                      }
+                  }]
+              }
+          }
+      });   
     },
     error : function(data)
     {

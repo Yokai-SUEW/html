@@ -11,8 +11,9 @@ if (!isset($_SESSION['loggedin'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./css/main.css" rel="stylesheet"><link rel=”stylesheet” href=”./bootstrap-css/bootstrap.css”>
-<link rel=”stylesheet” href=”./bootstrap-css/bootstrap-responsive.css”>
+    <link href="./css/main.css" rel="stylesheet">
+    <link rel=”stylesheet” href=”./bootstrap-css/bootstrap.css”>
+    <link rel=”stylesheet” href=”./bootstrap-css/bootstrap-responsive.css”>
     <link href="./css/homepage.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>Home Page</title>
@@ -23,6 +24,9 @@ if (!isset($_SESSION['loggedin'])) {
         <div id="stars2"></div>
         <div id="stars3"></div>
 </section>
+<div onclick="location.href='profil.php'" id="userlogged">
+    Logged in as: <?=$_SESSION['name']?>
+    </div>
     <div class="col-8 container header-content">
         <div class="row">
             <div class="col-11 text-container titleYokai">
@@ -33,7 +37,6 @@ if (!isset($_SESSION['loggedin'])) {
             </div>
         </div>
     </div>
-
     <div class="col-8 container main-content">
         <div class="row">
             <div class="col-12 container text textFirst" >
@@ -63,6 +66,30 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
 
     <div class="col-8 container footer-content">
+    <?php 
+require_once "config/database_con.php";
+
+$sql = "SELECT id, Temperatur, Luftfeuchtigkeit, Datum FROM sensor_status ORDER BY id DESC , Temperatur DESC, Luftfeuchtigkeit DESC, Datum DESC";
+        if($result = mysqli_query($link, $sql)){
+            if() {
+    
+            
+    if(mysqli_num_rows($result) > 0){
+
+            while($row = mysqli_fetch_array($result)){
+               
+            }
+        }
+        mysqli_free_result($result);
+    } else{
+        echo "<p>Ups... ich habe keine Daten gefunden.</p>";
+    }
+} else{
+    echo "Ups... ich könnte das leider nicht ausführen: $sql. " . mysqli_error($link);
+}
+mysqli_close($link);
+
+?>
     </div>
 
 
