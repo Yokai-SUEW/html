@@ -16,6 +16,7 @@ if (!isset($_SESSION['loggedin'])) {
     <link href="./css/main.css" rel="stylesheet"><link rel=”stylesheet” href=”./bootstrap-css/bootstrap.css”>
     <link rel=”stylesheet” href=”./bootstrap-css/bootstrap-responsive.css”>
     <link href="./css/status.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="../favicon.png"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>Server Status</title>
 </head>
@@ -30,10 +31,8 @@ if (!isset($_SESSION['loggedin'])) {
     </div>
 <div class="col-8 header-content">
         <div class="row">
-            <div class="col-7 iconServer">
-            <img src="https://img.icons8.com/carbon-copy/70/ffffff/server.png"/> <h3>Serverstatus</h3>
-            </div>
             <div title="Menu" class="col-12 iconMenu dropdown">
+            <img class="iconServer" src="https://img.icons8.com/carbon-copy/80/ffffff/server.png"/> <h3 class="iconServerh3">Serverstatus</h3>
             <button class="dropbtn"><img src="https://img.icons8.com/metro/45/ffffff/menu.png"/></button>
             <div class="col-12 dropdown-content">
                 <a href="homepage.php">Homepage</a>

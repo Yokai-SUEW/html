@@ -4,6 +4,7 @@ if (!isset($_SESSION['loggedin'])) {
 	header('Location: index.html');
 	exit;
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +15,7 @@ if (!isset($_SESSION['loggedin'])) {
     <link href="./css/main.css" rel="stylesheet">
     <link rel=”stylesheet” href=”./bootstrap-css/bootstrap.css”>
     <link rel=”stylesheet” href=”./bootstrap-css/bootstrap-responsive.css”>
+    <link rel="shortcut icon" type="image/png" href="../favicon.png"/>
     <link href="./css/homepage.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>Home Page</title>
@@ -64,29 +66,53 @@ if (!isset($_SESSION['loggedin'])) {
             </div>
         </div>
     </div>
-
     <div class="col-8 container footer-content">
-    <?php 
+    <div class="col-12 container text textFirst" >
+             Vorkommnisse 
+            </div>
+    <?php  
 require_once "config/database_con.php";
 
-$sql = "SELECT id, Temperatur, Luftfeuchtigkeit, Datum FROM sensor_status ORDER BY id DESC , Temperatur DESC, Luftfeuchtigkeit DESC, Datum DESC";
-        if($result = mysqli_query($link, $sql)){
-            if() {
-    
-            
-    if(mysqli_num_rows($result) > 0){
+$sql = "SELECT * FROM sensor_status WHERE active = 1";
 
+        if($result = mysqli_query($link, $sql)){
+    if(mysqli_num_rows($result) > 0){   
+        echo "<div class=\"col-12 alertBlock\">";
+            echo "<table class=\"alertTable\">";
+                echo "<thead>"; 
+                  echo "<tr>";
+                        echo "<th>ID</th>";
+                        echo "<th>Temperatur</th>";
+                        echo "<th>Datum</th>";
+                        echo "<th>Approved</th>";
+                    echo "</tr>";
+                echo "</thead>";
+                echo "<tbody>";
             while($row = mysqli_fetch_array($result)){
-               
+                            echo "<tr>";
+                                echo "<td>" . $row['id'] . "</td>";
+                                echo "<td>" . $row['Temperatur'] . "</td>";
+                                echo "<td>" . $row['Datum'] . "</td>";
+                                echo "<td>
+                                      <a href=\"update.php?upd=<?php echo ", $row['id'],";?>\" class=\"activeButton\"> 
+                                      <img src=\"https://img.icons8.com/metro/26/ffffff/checkmark.png\"/>
+                                      </a>
+                                      </td>";
+                            echo "</tr>";
             }
-        }
+                echo "</tbody>";
+            echo "</table>";
+        echo "</div>";
         mysqli_free_result($result);
     } else{
-        echo "<p>Ups... ich habe keine Daten gefunden.</p>";
+        echo "<p style=\"text-align: center;\">Es gibt keine Probleme!</p>";
     }
 } else{
-    echo "Ups... ich könnte das leider nicht ausführen: $sql. " . mysqli_error($link);
+    echo "Ups... ich könnte das leider nicht ausführen: <br> $sql. <br>" . mysqli_error($link);
 }
+
+$id = $row['id'];
+
 mysqli_close($link);
 
 ?>
@@ -94,6 +120,17 @@ mysqli_close($link);
 
 
     <script>
+
+        $(document).ready(function () {
+            $.ajax({
+                type: "GET",
+                url: "status.php",
+                data: {"id": <?php echo $machine_id;?>},
+                success: function (data) {
+                    console.log(data)
+                }
+            });
+        });
 
         function onhoverServer() {
             document.getElementById("imageServer").setAttribute("src", "https://img.icons8.com/carbon-copy/115/ffffff/server.png");

@@ -23,7 +23,8 @@ $stmt->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/profil.css" rel="stylesheet" type="text/css">
     <link href="./css/main.css" rel="stylesheet"><link rel=”stylesheet” href=”./bootstrap-css/bootstrap.css”>
-<link rel=”stylesheet” href=”./bootstrap-css/bootstrap-responsive.css”>
+    <link rel=”stylesheet” href=”./bootstrap-css/bootstrap-responsive.css”>
+    <link rel="shortcut icon" type="image/png" href="../favicon.png"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>CCTV</title>
 </head>
@@ -51,7 +52,8 @@ $stmt->close();
 </div>
 
 <div class="col-8 main-content">
-<div class="profilTable">
+<div class="row">
+<div class="col-8 profilTable">
 <?php 
 function getUserIP()
 {
@@ -96,6 +98,9 @@ $user_ip = getUserIP();
             <td><?php $host = gethostbyaddr($_SERVER['REMOTE_ADDR']); echo $host;?></td>
         </tr>
 </table>
+</div>
+<div class="col-4 profilTabel">
+<img src="https://img.icons8.com/ios-filled/300/ffffff/name.png"/></div>
 </div>
 </div>
     

@@ -1,14 +1,29 @@
-.iconServer {
-    text-align: left;
-    position: fixed;
-    height: 3cm;
-    z-index: 100;
-    padding-top: 0.5%;
+@import url(//db.onlinewebfonts.com/c/0a6ee448d1bd65c56f6cf256a7c6f20a?family=Bahnschrift);
+
+body {
+    font-family: Bahnschrift;
 }
 
-.iconServer h3 {
-    padding-left: 2cm;
-    margin-top: -1.45cm;
+body {
+    overflow-y: scroll !important;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+.iconServer {
+    text-align: left;
+    float: left;
+    position: static;
+    z-index: 99;
+}
+
+.iconServerh3 {
+    float: left;
+    margin-top: 0.6cm;
+    z-index: 10;
 }
 
 .statusTable table {
@@ -29,4 +44,6 @@
 
 .iconMenu {
     text-align: right !important;
+    position: static !important;
+    z-index: 98;
 }

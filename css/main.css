@@ -1,17 +1,22 @@
+@import url(//db.onlinewebfonts.com/c/0a6ee448d1bd65c56f6cf256a7c6f20a?family=Bahnschrift);
+
+* {
+  font-family: Bahnschrift;
+}
+
 html {
     background-color: transparent !important;
-    background-repeat: none;
+    background-repeat: no-repeat !important;
     width: auto;
-    overflow: auto;
-    overflow: auto;
-    max-height: fit-content;
+    height: 100%;
+    overflow: hidden;
     background: radial-gradient(ellipse at bottom, rgb(44, 44, 44) 0%, black 100%);
 }
 
 body {
   background-color: transparent !important;
-  overflow: auto;
-  max-height: fit-content;
+  height: 100%;
+  overflow: hidden;
 }
 
 #userlogged {
@@ -88,7 +93,7 @@ body {
     display: block;
     text-align: left;
     color: white;
-    font-family: bahnschrift;
+    font-family: Bahnschrift;
   }
 
   .dropdown-content a:hover {
@@ -104,7 +109,7 @@ body {
     float: left;
     color: white;
     background-color: rgb(44, 44, 44);
-    font-family: bahnschrift;
+    font-family: Bahnschrift;
     text-decoration: none;
   }
 

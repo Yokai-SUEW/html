@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json');
 
-define('DB_HOST', '0.tcp.ngrok.io:18969');
+define('DB_HOST', '4.tcp.ngrok.io:19986');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '292726242528');
 define('DB_NAME', 'yokai');

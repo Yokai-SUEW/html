@@ -28,20 +28,20 @@ $.ajax({
                     label: "Temperatur in °C",
                     fill: false,
                     lineTension: 0.1,
-                    backgroundColor: "rgba(230, 0, 0, 0.75)",
-                    borderColor: "rgba(230, 0, 0, 1)",
-                    pointHoverBackgroundColor: "rgba(230, 0, 0, 1)",
-                    pointHoverBorderColor: "rgba(230, 0, 0, 1)",
+                    backgroundColor: "rgba(204, 229, 255, 0.75)",
+                    borderColor: "rgba(204, 229, 255, 0.75)",
+                    pointHoverBackgroundColor: "rgba(204, 229, 255, 0.75)",
+                    pointHoverBorderColor: "rgba(204, 229, 255, 0.75)",
                     data: Temperatur
                 },
                 {
                     label: "Luftfeuchtigkeit in %",
                     fill: false,
                     lineTension: 0.1,
-                    backgroundColor: "rgba(59, 89, 152, 0.75)",
-                    borderColor: "rgba(59, 89, 152, 1)",
-                    pointHoverBackgroundColor: "rgba(59, 89, 152, 1)",
-                    pointHoverBorderColor: "rgba(59, 89, 152, 1)",
+                    backgroundColor: "rgba(255, 229, 204, 0.75)",
+                    borderColor: "rgba(255, 229, 204, 1)",
+                    pointHoverBackgroundColor: "rgba(255, 229, 204, 1)",
+                    pointHoverBorderColor: "rgba(255, 229, 204, 1)",
                     data: Luftfeuchtigkeit
                 }
 

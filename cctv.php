@@ -13,7 +13,8 @@ if (!isset($_SESSION['loggedin'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/cctv.css" rel="stylesheet" type="text/css">
     <link href="./css/main.css" rel="stylesheet"><link rel=”stylesheet” href=”./bootstrap-css/bootstrap.css”>
-<link rel=”stylesheet” href=”./bootstrap-css/bootstrap-responsive.css”>
+    <link rel=”stylesheet” href=”./bootstrap-css/bootstrap-responsive.css”>
+    <link rel="shortcut icon" type="image/png" href="../favicon.png"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>CCTV</title>
 </head>
@@ -26,12 +27,10 @@ if (!isset($_SESSION['loggedin'])) {
 <div onclick="location.href='profil.php'" id="userlogged">
     Logged in as: <?=$_SESSION['name']?>
     </div>
-<div class="col-8 header-content">
+    <div class="col-8 header-content">
         <div class="row">
-            <div class="col-7 iconCCTV">
-            <img src="https://img.icons8.com/carbon-copy/100/ffffff/visible.png" id="imageVisible"/> <h3>CCTV</h3>
-            </div>
             <div title="Menu" class="col-12 iconMenu dropdown">
+            <img class="iconCCTV" src="https://img.icons8.com/carbon-copy/100/ffffff/visible.png"/> <h3 class="iconCCTVh3">CCTV</h3>
             <button class="dropbtn"><img src="https://img.icons8.com/metro/45/ffffff/menu.png"/></button>
             <div class="col-12 dropdown-content">
                 <a href="homepage.php">Homepage</a>

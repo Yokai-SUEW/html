@@ -1,5 +1,7 @@
+@import url(//db.onlinewebfonts.com/c/0a6ee448d1bd65c56f6cf256a7c6f20a?family=Bahnschrift);
+
 * {
-    font-family: bahnschrift;
+    font-family: Bahnschrift;
 }
 
 .main-content {
@@ -87,3 +89,14 @@
     height: 70%;
 }
 
+.alertBlock > table {
+    text-align: center !important;
+    width: 100%;
+}
+
+.activeButton {
+    background-color: green;
+    border-style: none;
+    border-radius: 2mm;
+    padding: 0.7mm !important;
+}

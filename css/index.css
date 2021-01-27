@@ -1,10 +1,13 @@
+@import url(//db.onlinewebfonts.com/c/0a6ee448d1bd65c56f6cf256a7c6f20a?family=Bahnschrift);
+
 body {
     background-color: transparent !important;
+    font-family: Bahnschrift;
 }
 
 
 #title {
-    font-family: bahnschrift;
+    font-family: Bahnschrift;
     color: white;
     text-align: center;
     font-weight: 600;
@@ -28,7 +31,7 @@ body {
   border-radius: 3mm;
   text-align: center;
   box-shadow: 0 8px 6px -6px black;
-  font-family: bahnschrift;
+  font-family: Bahnschrift;
   z-index: 99;
 }
 

@@ -1,3 +1,5 @@
+@import url(//db.onlinewebfonts.com/c/0a6ee448d1bd65c56f6cf256a7c6f20a?family=Bahnschrift);
+
 .dropbtn{
     z-index: 99;
     padding-bottom: 0.3cm;
@@ -40,9 +42,13 @@ h2:hover {
     text-align: right !important;
 }
 
-.profilTable table {
-    text-align: center;
+table {
     width: 100%;
+}
+
+th {
+    padding: 0.5cm;
+    text-align: left;
 }
 
 .profilTable table tbody tr:hover {
