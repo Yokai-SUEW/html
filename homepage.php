@@ -71,7 +71,7 @@ if (!isset($_SESSION['loggedin'])) {
              Vorkommnisse 
             </div>
     <?php  
-require_once "config/database_con.php";
+    require_once "config/database_con.php";
 
 $sql = "SELECT * FROM sensor_status WHERE active = 1";
 
@@ -90,13 +90,11 @@ $sql = "SELECT * FROM sensor_status WHERE active = 1";
                 echo "<tbody>";
             while($row = mysqli_fetch_array($result)){
                             echo "<tr>";
-                                echo "<td>" . $row['id'] . "</td>";
+                                echo "<td name=\"id\">" . $row['id'] . "</td>";
                                 echo "<td>" . $row['Temperatur'] . "</td>";
                                 echo "<td>" . $row['Datum'] . "</td>";
                                 echo "<td>
-                                      <a href=\"update.php?upd=<?php echo ", $row['id'],";?>\" class=\"activeButton\"> 
-                                      <img src=\"https://img.icons8.com/metro/26/ffffff/checkmark.png\"/>
-                                      </a>
+                                      <a class=\"activeButton\" href='update.php?uid=".$row['id']."'>Approve</a>
                                       </td>";
                             echo "</tr>";
             }
@@ -110,8 +108,6 @@ $sql = "SELECT * FROM sensor_status WHERE active = 1";
 } else{
     echo "Ups... ich könnte das leider nicht ausführen: <br> $sql. <br>" . mysqli_error($link);
 }
-
-$id = $row['id'];
 
 mysqli_close($link);
 

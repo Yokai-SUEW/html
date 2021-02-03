@@ -1,5 +1,5 @@
 <?php
-define('DB_SERVER', '4.tcp.ngrok.io:19986');
+define('DB_SERVER', '4.tcp.ngrok.io:12248');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '292726242528');
 define('DB_NAME', 'yokai');
